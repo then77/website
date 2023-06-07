@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+@keyframes granimbirth {
+  0% { background-position-x: 0%; }
+  100% { background-position-x: 100%; }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px #65697d;
+}
+
+.text-stroke-b1 {
+  -webkit-text-stroke: 2px #505ea7;
+}
+.text-stroke-b2 {
+  -webkit-text-stroke: 2px #50a786;
+}
+.text-stroke-b3 {
+  -webkit-text-stroke: 2px #a75087;
+}
