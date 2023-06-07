@@ -16,6 +16,9 @@ const nextConfig = {
       }
     ],
   },
+  env: {
+    bday: process.env.BIRTHDAY,
+  },
 }
 
 module.exports = nextConfig;

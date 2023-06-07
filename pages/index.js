@@ -42,7 +42,7 @@ const TitleHeading = styled(motion.h1)`
 `;
 
 export default function Home(props) {
-  const birthDate = new Date(process.env.BIRTHDAY);
+  const birthDate = new Date(process.env.bday);
   const todayDate = new Date();
 
   const myAge = () => {
