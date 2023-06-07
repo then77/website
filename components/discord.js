@@ -6,9 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 import Loading from "./loading.js";
 
-import MyImage from "../assets/me.jpg";
-import 'react-loading-skeleton/dist/skeleton.css';
-
 const ProfileImageSmall = styled(Image)`
   ${tw`w-4 h-4 rounded-full border border-secondary-light border-solid mr-2`}
 `;

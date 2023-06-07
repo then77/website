@@ -8,8 +8,8 @@ import Footer from "../components/footer.js";
 import PtConf from "../components/particles.json";
 
 import Sakuta1 from "../assets/sakuta-1.jpg";
-import Sakuta2 from "../assets/sakuta-1.jpg";
-import Sakuta3 from "../assets/sakuta-1.jpg";
+import Sakuta2 from "../assets/sakuta-2.jpg";
+import Sakuta3 from "../assets/sakuta-3.jpg";
 
 const ProfileImage = styled(Image)`
   ${tw`w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full md:rounded-5xl bg-nav shadow-lg transition-all`}

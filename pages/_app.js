@@ -1,7 +1,5 @@
 import "../components/globals.css";
 import Head from "next/head";
-import Navigation from "../components/navigation.js";
-import Footer from "../components/footer.js";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Lenis as ReactLenis, useLenis } from '@studio-freight/react-lenis';
 

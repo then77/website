@@ -42,7 +42,7 @@ const TitleHeading = styled(motion.h1)`
 `;
 
 export default function Home(props) {
-  const birthDate = new Date(["2008","04","05"].join("-"));
+  const birthDate = new Date(process.env.BIRTHDAY);
   const todayDate = new Date();
 
   const myAge = () => {
@@ -57,7 +57,6 @@ export default function Home(props) {
     return age.toString();
   };
   
-  // <div css={tw`fixed top-0 left-0 z-[9999] w-full mt-5 flex justify-center items-center`}><div css={tw`px-8 md:px-12 py-3 border border-solid border-primary-dark rounded-xl font-semibold md:text-lg text-center shadow bg-nav`} style={{ backdropFilter: "blur(8px)" }}>This website in development!</div></div>
   return (
     <>
       <Navigation />

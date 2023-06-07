@@ -1,5 +1,4 @@
 import tw from 'twin.macro';
-import Link from 'next/link';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import { useGlitch } from 'react-powerglitch';
 import Typewriter from 'typewriter-effect';

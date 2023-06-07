@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import tw, { styled, css } from 'twin.macro';
 import { motion } from 'framer-motion';
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 const NavbarBase = styled.div`
