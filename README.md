@@ -6,13 +6,17 @@
 <!-- Site description -->
 A simple website made in Next.js to show my developer portofolio. Check it out: [therealzzy.xyz](https://therealzzy.xyz)
 
-This website is actually a complete full rewrite of my old, hard-to-maintain site: [old site](https://site.therealzzy.xyz) ([repo](https://github.com/then77/old-site))
+This website is actually a complete full rewrite of my old, hard-to-maintain site: [old site](https://site.therealzzy.xyz) ([repo](https://github.com/then77/old-web))
 
 <!-- Host this page -->
 # ☁️ Hosting
 
 ### Using Vercel / Cloudflare Pages
-Coming soon!
+1. Fork this repo
+2. Create new project and connect your github
+3. Select your forked repo
+4. (Cloudflare only) set build command to `next build`
+5. Save and deploy
 
 ### Self-host (Locally)
 1. Make sure that `Node.js 18.x` & `npm` are already installed.
