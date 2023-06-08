@@ -12,13 +12,14 @@ This website is actually a complete full rewrite of my old, hard-to-maintain sit
 # ☁️ Hosting
 
 ### Using Vercel
-1. Create new project in Vercel
-2. Choose `Import Third-Party Git Repository`
-3. Paste this repository url
+1. (Optional) Fork this repository
+2. Create new project in Vercel
+3. Choose `Import Third-Party Git Repository`
+4. Paste this repository url or your forked repository
 ```
 https://github.com/then77/website/
 ```
-4. Follow the instruction and create
+5. Follow the instruction and create
 
 ### Self-host (Locally)
 1. Make sure that `Node.js 18.x` & `npm` are already installed.
