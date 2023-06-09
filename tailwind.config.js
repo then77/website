@@ -17,7 +17,7 @@ module.exports = {
         'btnhover': 'rgba(71,85,105,0.3)',
       },
       fontFamily: {
-        'space': ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        'space': ['"Space Grotesk Variable"', '"Space Grotesk"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         '10xl': '10rem',

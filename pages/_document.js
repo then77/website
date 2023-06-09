@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import '@fontsource-variable/space-grotesk';
 import tw from 'twin.macro';
  
 export default function Document() {
