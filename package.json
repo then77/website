@@ -3,7 +3,7 @@
   "version": "1.3.2",
   "description": "Realzzy React Website Server",
   "author": "Realzzy",
-  "license": "ISC",
+  "license": "Apache 2.0",
   "main": "index.js",
   "dependencies": {
     "@emotion/css": "^11.11.0",
