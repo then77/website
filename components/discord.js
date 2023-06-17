@@ -106,11 +106,20 @@ class LanyardClient {
                   text2: limitCharacters(data.d.spotify.album, 20)
                 }
               } else {
-                this.data = {
-                  spotify: false,
-                  title: data.d.discord_user.global_name,
-                  image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.webp`,
-                  text1: capitalize(data.d.discord_status.replace("dnd", "busy"))
+                if (data.d.activities.length > 0 && data.d.activities[0].details.toLowerCase().includes("sleeping")) {
+                  this.data = {
+                    spotify: false,
+                    title: data.d.discord_user.global_name,
+                    image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.webp`,
+                    text1: "Sleeping 💤"
+                  }
+                } else {
+                  this.data = {
+                    spotify: false,
+                    title: data.d.discord_user.global_name,
+                    image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.webp`,
+                    text1: capitalize(data.d.discord_status.replace("dnd", "busy"))
+                  }
                 }
               }
           
