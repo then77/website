@@ -76,7 +76,7 @@ export default function Home(props) {
           />
           <div css={tw`flex justify-center items-start flex-row text-2xl mt-4`}>
             <Link href="https://github.com/then77"><ButtonSocial initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0 }} css={tw`mr-1`} data-tooltip-id="tippy" data-tooltip-content="@then77"><FontAwesomeIcon icon={faGithub} fixedWidth  /></ButtonSocial></Link>
-            <Link href="https://discord.com/users/962658658070704148"><ButtonSocial initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }} css={tw`mx-1`} data-tooltip-id="tippy" data-tooltip-content="The Realzy#1963"><FontAwesomeIcon icon={faDiscord} fixedWidth /></ButtonSocial></Link>
+            <Link href="https://discord.com/users/962658658070704148"><ButtonSocial initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }} css={tw`mx-1`} data-tooltip-id="tippy" data-tooltip-content="@realzzy"><FontAwesomeIcon icon={faDiscord} fixedWidth /></ButtonSocial></Link>
             <Link href="mailto:hello@therealzzy.xyz"><ButtonSocial initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }} css={tw`ml-1`} data-tooltip-id="tippy" data-tooltip-content="hello@therealzzy.xyz"><FontAwesomeIcon icon={faEnvelope} fixedWidth /></ButtonSocial></Link>
           </div>
         </Parallax>
