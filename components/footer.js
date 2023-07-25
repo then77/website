@@ -16,7 +16,7 @@ export default function Footer() {
   const [rrop, setRROP] = useState(0);
   const gotoOther = (e) => {
     e.preventDefault();
-    setRickroll(true);
+    setRickroll(true); // Whoops
     setTimeout(() => setRROP(1), 1000);
   };
   const hateIt = (e) => e.preventDefault();
@@ -33,7 +33,7 @@ export default function Footer() {
       )}
       <p css={tw`m-0 mt-20 md:mt-32 mb-4 p-0 text-center font-medium text-sm text-secondary-light`}>
         &copy; 2023 by Realzzy, All Right Reserved.
-        <br /><Linked href={'https://site.therealzzy.xyz'}>Old Site</Linked> • <Linked href={'/other'} onClick={gotoOther} onContextMenu={hateIt}>Other?</Linked>
+        <br /><Linked href={'https://v1.therealzzy.xyz'}>Old Site</Linked> • <Linked href={'/other'} onClick={gotoOther} onContextMenu={hateIt}>Other?</Linked>
       </p>
     </>
   )
