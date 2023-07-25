@@ -4,7 +4,7 @@ import Image from "next/image";
 import tw, { styled } from 'twin.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
-import Loading from "./loading.js";
+import Loading from "./loading";
 
 const ProfileImageSmall = styled(Image)`
   ${tw`w-4 h-4 rounded-full border border-secondary-light border-solid mr-2`}

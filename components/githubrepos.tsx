@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import tw, { styled } from 'twin.macro';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
-import Loading from "./loading.js";
+import Loading from "./loading";
 
 import MyImage from "../assets/me.jpg";
 import 'react-loading-skeleton/dist/skeleton.css';

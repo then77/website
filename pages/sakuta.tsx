@@ -4,7 +4,7 @@ import Image from "next/image";
 import Typewriter from 'typewriter-effect';
 import Particles from 'react-tsparticles';
 import { motion } from 'framer-motion';
-import Footer from "../components/footer.js";
+import Footer from "../components/footer";
 import PtConf from "../components/particles.json";
 
 import Sakuta1 from "../assets/sakuta-1.jpg";

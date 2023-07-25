@@ -9,11 +9,11 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import GithubRepos from "../components/githubrepos.js";
-import DiscordActivity from "../components/discord.js";
-import Navigation from "../components/navigation.js";
-import SkillContainer from "../components/skill.js";
-import Footer from "../components/footer.js";
+import GithubRepos from "../components/githubrepos";
+import DiscordActivity from "../components/discord";
+import Navigation from "../components/navigation";
+import SkillContainer from "../components/skill";
+import Footer from "../components/footer";
 import PtConf from "../components/particles.json";
 import MyImage from "../assets/me.jpg";
 
