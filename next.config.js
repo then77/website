@@ -18,6 +18,7 @@ const nextConfig = {
   },
   env: {
     bday: process.env.BIRTHDAY,
+    instagram: process.env.INSTAGRAM,
   },
 }
 
