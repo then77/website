@@ -33,6 +33,7 @@ export default function Navigation() {
       setIsScrolled(scrollPosition > 20);
     };
 
+    handleScroll(); // Call once to load navbar
     window.addEventListener('scroll', handleScroll);
 
     return () => {
