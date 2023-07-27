@@ -19,7 +19,7 @@ export default function AppWrapper({ Component, pageProps }) {
         <title>{pageProps.title ? metadata.title.template.replace('%s', pageProps.title) : metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
         <meta name="theme-color" content={metadata.themeColor} />
-        <meta property="twitter:card" content={metadata.bannerOg} />
+        <meta property="og:image" content={metadata.bannerOg} />
       </Head>
       <ParallaxProvider>
         <Component {...pageProps} />
