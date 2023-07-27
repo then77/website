@@ -9,6 +9,7 @@ const metadata = {
   },
   description: 'Welcome to Realzzy.dev site!',
   themeColor: '#10529f',
+  bannerOg: 'https://therealzzy.xyz/banner.jpg',
 };
 
 export default function AppWrapper({ Component, pageProps }) {
@@ -18,6 +19,7 @@ export default function AppWrapper({ Component, pageProps }) {
         <title>{pageProps.title ? metadata.title.template.replace('%s', pageProps.title) : metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
         <meta name="theme-color" content={metadata.themeColor} />
+        <meta property="og:image" content={metadata.bannerOg} />
       </Head>
       <ParallaxProvider>
         <Component {...pageProps} />
