@@ -110,7 +110,7 @@ class LanyardClient {
                   this.data = {
                     spotify: false,
                     title: data.d.discord_user.global_name,
-                    image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.webp`,
+                    image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.gif`,
                     text1: "Sleeping 💤"
                   }
                 } else {
