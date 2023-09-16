@@ -67,8 +67,6 @@ export default function Sakuta(props) {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   )
 }

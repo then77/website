@@ -17,16 +17,30 @@ const NavbarScrolled = css`
   backdrop-filter: blur(8px);
 `;
 
-const Linked = styled(Link)`
-  ${tw`text-primary-light no-underline font-medium md:text-lg m-0 mx-2 md:mx-5 p-0 transition-all`}
+const Linked1 = styled(Link)`
+  ${tw`text-secondary-light no-underline font-medium md:text-lg m-0 mx-2 md:mx-5 p-0 transition-all`}
   :hover {
-    ${tw`text-secondary-light`}
+    ${tw`text-emerald-300 font-semibold`}
   }
 `;
 
-export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+const Linked2 = styled(Link)`
+  ${tw`text-secondary-light no-underline font-medium md:text-lg m-0 mx-2 md:mx-5 p-0 transition-all`}
+  :hover {
+    ${tw`text-orange-300 font-semibold`}
+  }
+`;
 
+const Linked3 = styled(Link)`
+  ${tw`text-secondary-light no-underline font-medium md:text-lg m-0 mx-2 md:mx-5 p-0 transition-all`}
+  :hover {
+    ${tw`text-sky-300 font-semibold`}
+  }
+`;
+
+export default function Navigation({ section }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+    
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -35,7 +49,7 @@ export default function Navigation() {
 
     handleScroll(); // Call once to load navbar
     window.addEventListener('scroll', handleScroll);
-
+      
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -46,9 +60,9 @@ export default function Navigation() {
     <>
       <NavbarBase>
         <motion.div css={navbarStyle} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <Linked href="#about" scroll={false}>About</Linked>
-          <Linked href="#skills" scroll={false}>Skill</Linked>
-          <Linked href="#projects" scroll={false}>Project</Linked>
+          <Linked1 href="#about" scroll={false} css={ section == 1 ? tw`text-emerald-300 font-semibold` : null }>About</Linked1>
+          <Linked2 href="#skills" scroll={false} css={ section == 2 ? tw`text-orange-300 font-semibold` : null }>Skill</Linked2>
+          <Linked3 href="#projects" scroll={false} css={ section == 3 ? tw`text-sky-300 font-semibold` : null }>Project</Linked3>
         </motion.div>
       </NavbarBase>
     </>

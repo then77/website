@@ -1,5 +1,7 @@
 import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/karla';
 import Head from "next/head";
+import { AnimatePresence } from 'framer-motion';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 const metadata = {
@@ -8,8 +10,8 @@ const metadata = {
     default: 'Realzzy Website',
   },
   description: 'Welcome to Realzzy.dev site!',
-  themeColor: '#10529f',
-  bannerOg: 'https://therealzzy.xyz/banner.jpg',
+  themeColor: '#40e9b8',
+  bannerOg: 'https://therealzzy.xyz/me.jpg',
 };
 
 export default function AppWrapper({ Component, pageProps }) {
@@ -21,9 +23,11 @@ export default function AppWrapper({ Component, pageProps }) {
         <meta name="theme-color" content={metadata.themeColor} />
         <meta property="og:image" content={metadata.bannerOg} />
       </Head>
-      <ParallaxProvider>
-        <Component {...pageProps} />
-      </ParallaxProvider>
+      <AnimatePresence mode='wait'>
+        <ParallaxProvider>
+          <Component {...pageProps} />
+        </ParallaxProvider>
+      </AnimatePresence>
     </>
   )
 };

@@ -8,7 +8,7 @@
     "position": "",
     "repeat": "",
     "size": "",
-    "opacity": 0
+    "opacity": 1
   },
   "backgroundMask": {
     "composite": "destination-out",
@@ -21,14 +21,14 @@
     "enable": false
   },
   "defaultThemes": {},
-  "delay": 100,
+  "delay": 0,
   "fullScreen": {
     "enable": true,
     "zIndex": -1
   },
   "detectRetina": true,
   "duration": 0,
-  "fpsLimit": 20,
+  "fpsLimit": 40,
   "interactivity": {
     "detectsOn": "window",
     "events": {
@@ -229,31 +229,31 @@
       }
     },
     "color": {
-      "value": "#ffffff",
+      "value": "#ff0000",
       "animation": {
         "h": {
           "count": 0,
-          "enable": false,
+          "enable": true,
           "offset": 0,
-          "speed": 1,
+          "speed": 60,
           "delay": 0,
           "decay": 0,
-          "sync": true
+          "sync": false
         },
         "s": {
           "count": 0,
-          "enable": false,
+          "enable": true,
           "offset": 0,
-          "speed": 1,
+          "speed": 10,
           "delay": 0,
           "decay": 0,
           "sync": true
         },
         "l": {
-          "count": 0,
+          "count": 100,
           "enable": false,
-          "offset": 0,
-          "speed": 1,
+          "offset": 100,
+          "speed": 0.5,
           "delay": 0,
           "decay": 0,
           "sync": true
@@ -312,7 +312,7 @@
       },
       "random": false,
       "size": false,
-      "speed": 0.2,
+      "speed": 0.5,
       "spin": {
         "acceleration": 0,
         "enable": false
@@ -338,16 +338,16 @@
     "opacity": {
       "random": {
         "enable": true,
-        "minimumValue": 0.2
+        "minimumValue": 0.3
       },
       "value": {
-        "min": 0.2,
-        "max": 0.6
+        "min": 0.3,
+        "max": 0.8
       },
       "animation": {
         "count": 0,
         "enable": true,
-        "speed": 0.3,
+        "speed": 0.5,
         "decay": 0,
         "delay": 0,
         "sync": false,
@@ -377,13 +377,16 @@
     },
     "size": {
       "random": {
-        "enable": false,
+        "enable": true,
         "minimumValue": 1
       },
-      "value": 2,
+      "value": {
+        "min": 1,
+        "max": 3
+      },
       "animation": {
         "count": 0,
-        "enable": false,
+        "enable": true,
         "speed": 3,
         "decay": 0,
         "delay": 0,
@@ -578,6 +581,13 @@
   "smooth": true,
   "style": {},
   "themes": [],
-  "zLayers": 1000,
-  "emitters": []
+  "zLayers": 100,
+  "emitters": [],
+  "motion": {
+    "disable": false,
+    "reduce": {
+      "factor": 4,
+      "value": true
+    }
+  }
 }

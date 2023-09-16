@@ -13,12 +13,18 @@ const nextConfig = {
         hostname: 'cdn.discordapp.com',
         port: '',
         pathname: '/**/*',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io',
+        port: '',
+        pathname: '/**/*',
       }
     ],
   },
   env: {
     bday: process.env.BIRTHDAY,
-    instagram: process.env.INSTAGRAM,
+    bdaypfp: "https://ik.imagekit.io/gdfnfpn7v/my-secret-pfp.png",
   },
 }
 

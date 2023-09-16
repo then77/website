@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html css={tw`scroll-smooth`}>
       <Head />
-      <body css={tw`bg-default font-space text-primary-light min-h-screen m-0 p-0 selection:bg-secondary-dark selection:text-primary-light`}>
+      <body css={tw`bg-default font-karla text-primary-light m-0 p-0 selection:bg-secondary-dark selection:text-primary-light`}>
         <Main />
         <NextScript />
       </body>

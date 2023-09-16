@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+const {default: flattenColorPalette} = require('tailwindcss/lib/util/flattenColorPalette');
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -18,6 +18,7 @@ module.exports = {
       },
       fontFamily: {
         'space': ['"Space Grotesk Variable"', '"Space Grotesk"', 'system-ui', 'sans-serif'],
+        'karla': ['"Karla Variable"', '"Karla"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         '10xl': '10rem',
@@ -27,7 +28,25 @@ module.exports = {
         '4xl': '2rem',
         '5xl':'2.5rem',
       },
+      spacing: {
+        '88': '22rem',
+      },
     },
   },
-  plugins: [],
+  plugins: [{
+    handler: tw => {
+      tw.matchUtilities({
+        'text-glow': value => ({
+          'text-shadow': `0 0 5px ${value}, 0 0 150px ${value}`,
+        }),
+        'glow': value => ({
+          filter: `drop-shadow(0px 0px 8px ${value})`,
+        }),
+      },
+      {
+        values: flattenColorPalette(tw.theme('colors')),
+        type: 'color',
+      });
+    }
+  }],
 }

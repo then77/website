@@ -16,6 +16,7 @@ const Repo = styled.div`
   ${tw`border border-primary-dark border-solid rounded-2xl bg-nav m-0 relative p-5 transition-all no-underline`}
   backdrop-filter: blur(2px);
   :hover {
+    ${tw`bg-zinc-950 glow-secondary-dark`}
     margin-top: -3px;
     margin-bottom: 3px;
   }
@@ -83,7 +84,7 @@ const GithubRepos = () => {
             </div>
             <h1 css={tw`text-primary-light text-xl md:text-2xl font-semibold m-0 p-0`}>{repo.repo}</h1>
             <p css={tw`text-secondary-light text-sm md:text-base m-0 mb-2 p-0`}>{limitCharacters(repo.description, 40) || 'No description provided'}</p>
-            <p css={tw`text-primary-dark m-0 p-0 text-sm`}>
+            <p css={tw`text-secondary-light m-0 p-0 text-sm`}>
               <span
                 css={tw`w-2.5 h-2.5 mr-2 rounded-full inline-block`}
                 style={{ backgroundColor: repo.languageColor }}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import tw, { styled } from 'twin.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faMoon, faCircle } from '@fortawesome/free-solid-svg-icons';
 import Loading from "./loading.js";
 
 const ProfileImageSmall = styled(Image)`
@@ -18,9 +19,7 @@ const Activity = styled(Image)`
 const LinkSpotify = styled(Link)`
   ${tw`text-primary-light text-lg md:text-3xl tracking-tighter md:tracking-tight font-bold m-0 p-0 no-underline transition-all`}
   :hover {
-    ${tw`text-sky-200`}
-    margin-top: -2px;
-    margin-bottom: 2px;
+    ${tw`text-primary-light text-glow-secondary-light`}
   }
 `;
 
@@ -103,23 +102,17 @@ class LanyardClient {
                   image: data.d.spotify.album_art_url,
                   url: `https://open.spotify.com/track/${data.d.spotify.track_id}`,
                   text1: limitCharacters(data.d.spotify.artist.replace(/;/g, ","), 22),
-                  text2: limitCharacters(data.d.spotify.album, 20)
+                  text2: limitCharacters(data.d.spotify.album, 20),
                 }
               } else {
-                if (data.d.activities.length > 0 && data.d.activities[0].details.toLowerCase().includes("sleeping")) {
-                  this.data = {
-                    spotify: false,
-                    title: data.d.discord_user.global_name,
-                    image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.gif`,
-                    text1: "Sleeping 💤"
-                  }
-                } else {
-                  this.data = {
-                    spotify: false,
-                    title: data.d.discord_user.global_name,
-                    image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.gif`,
-                    text1: capitalize(data.d.discord_status.replace("dnd", "busy"))
-                  }
+                let textcolor = data.d.discord_status == "online" ? tw`text-green-300` : data.d.discord_status == "idle" ? tw`text-amber-400` : data.d.discord_status == "dnd" ? tw`text-red-300` : tw`text-secondary-light`;
+                
+                this.data = {
+                  spotify: false, tc: textcolor,
+                  title: data.d.discord_user.global_name,
+                  image: `https://cdn.discordapp.com/avatars/${this.userid}/${data.d.discord_user.avatar}.webp?size=512`,
+                  text1: data.d.discord_status.replace("dnd", "busy"),
+                  sleep: (data.d.activities.length > 0 && data.d.activities[0].details.toLowerCase().includes("sleeping"))
                 }
               }
           
@@ -240,7 +233,7 @@ const DiscordActivity = () => {
   return (
     <div css={tw`flex justify-center items-center flex-row md:flex-col xl:flex-row mb-12 md:mb-0`}>
       {activity.image ? (
-        <div css={tw`rounded-2xl w-20 md:w-32 h-20 md:h-32 md:mb-5 xl:mb-0 mr-4 md:mr-0 xl:mr-8 shadow-lg relative`}>
+        <div css={tw`rounded-2xl w-20 md:w-32 2xl:w-44 h-20 md:h-32 2xl:w-44 md:mb-5 xl:mb-0 mr-4 md:mr-0 xl:mr-8 shadow-lg relative`}>
           <Image src={activity.image} alt={'My profile image'} fill={true} css={tw`relative`} style={{ borderRadius: '16px' }} />
         </div>
       ) : (
@@ -262,7 +255,17 @@ const DiscordActivity = () => {
           </div>
         )}
         {activity.text1 ? (
-          <p css={tw`text-secondary-light text-sm md:text-xl md:tracking-wide m-0 p-0`}>{activity.text1}</p>
+          activity.sleep ? (
+            <p css={tw`text-amber-400 text-sm md:text-xl md:tracking-wide m-0 p-0`}>
+              <FontAwesomeIcon icon={faMoon} css={tw`mr-2`} />
+              Sleeping
+            </p>
+          ) : (
+            <p css={[tw`text-sm md:text-xl md:tracking-wide m-0 p-0`, activity.tc]}>
+              { activity.tc != undefined && (<FontAwesomeIcon icon={faCircle} css={tw`text-[10px] md:mb-0.5 mr-2`} />)}
+              {capitalize(activity.text1)}
+            </p>
+          )
         ) : (
           <div css={tw`w-16 md:w-24 h-4 md:h-6 mb-1`}>
             <Loading css={tw`w-full h-full`} />
